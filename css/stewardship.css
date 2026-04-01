@@ -1,5 +1,5 @@
 /* --- Global Reset & Fonts --- */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Montserrat:wght@300;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,500&family=Montserrat:wght@300;400;500;600&display=swap');
 
 * {
     margin: 0;
@@ -13,7 +13,7 @@ body, html {
     scroll-behavior: smooth;
 }
 
-/* --- Section 1: Stewardship Hero --- */
+/* --- Section 1: Hero --- */
 .stewardship-hero {
     position: relative;
     height: 100vh;
@@ -46,7 +46,6 @@ body, html {
     font-size: clamp(2.8rem, 8vw, 5rem);
     font-weight: 500;
     margin-bottom: 10px;
-    letter-spacing: 1px;
 }
 
 .hero-divider {
@@ -99,10 +98,9 @@ body, html {
     line-height: 1.6;
     letter-spacing: 0.3px;
     font-weight: 500;
-    padding: 0 10px;
 }
 
-/* --- Section 3: Pillars of Impact (RESPONSIVE FIX) --- */
+/* --- Section 3: Pillars (Responsive Grid) --- */
 .pillars-section {
     padding: 80px 20px;
     background-color: #ffffff;
@@ -112,34 +110,21 @@ body, html {
     align-items: center;
 }
 
-.pillars-header {
-    text-align: center;
-    margin-bottom: 60px;
-}
+.pillars-header { text-align: center; margin-bottom: 60px; }
 
 .pillars-main-title {
     font-family: 'Playfair Display', serif;
     color: #1B1917;
     font-size: clamp(2rem, 6vw, 3rem);
     font-weight: 500;
-    margin-bottom: 10px;
-}
-
-.pillars-subtitle {
-    font-family: 'Montserrat', sans-serif;
-    color: #8d8378;
-    font-size: clamp(0.9rem, 2vw, 1.1rem);
-    font-weight: 300;
-    letter-spacing: 2px;
 }
 
 .pillars-grid {
     display: grid;
-    grid-template-columns: 1fr; /* 1 col on mobile */
+    grid-template-columns: 1fr;
     gap: 30px;
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
 }
 
 .pillar-card {
@@ -149,152 +134,112 @@ body, html {
     display: flex;
     flex-direction: column;
     height: 100%;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transition: transform 0.4s ease;
     text-align: center; 
-}
-
-.pillar-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.06);
 }
 
 .pillar-icon {
     width: 100%;
-    height: 300px; /* Mobile height */
+    height: 300px; 
     object-fit: cover;
     border-radius: 12px;
     margin-bottom: 30px;
 }
 
-.card-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.6rem;
-    color: #1B1917;
-    margin-bottom: 10px;
-}
+.card-title { font-family: 'Playfair Display', serif; font-size: 1.6rem; margin-bottom: 10px; }
 
-.card-divider {
-    width: 60px;
-    height: 1px;
-    background-color: #a38d78;
-    margin: 15px auto;
-}
+.card-divider { width: 60px; height: 1px; background-color: #a38d78; margin: 15px auto; }
 
-.card-desc {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.95rem;
-    line-height: 1.7;
-    color: #444;
-    margin-bottom: 25px;
-    font-weight: 300;
-}
+.card-desc { font-family: 'Montserrat', sans-serif; font-size: 0.95rem; line-height: 1.7; color: #444; margin-bottom: 25px; }
 
-.card-link {
-    margin-top: auto;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.8rem;
-    color: #a38d78;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 600;
-}
+.card-link { margin-top: auto; font-family: 'Montserrat', sans-serif; font-size: 0.8rem; color: #a38d78; text-transform: uppercase; letter-spacing: 2px; text-decoration: none; font-weight: 600; }
 
-/* Tablet & Desktop Adjustments for Pillars */
-@media (min-width: 768px) {
-    .pillars-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 cols for tablet */
-    }
-}
-
-@media (min-width: 1024px) {
-    .pillars-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 cols for desktop */
-    }
+@media (min-width: 768px) { .pillars-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { 
+    .pillars-grid { grid-template-columns: repeat(3, 1fr); } 
     .pillar-card { text-align: left; padding: 50px 40px; }
     .pillar-icon { height: 385px; }
     .card-divider { margin: 20px 0; }
 }
 
-/* --- Section 4: Legacy Grid Section --- */
-.legacy-section {
-    background-color: #ffffff;
-    padding: 80px 20px;
-    width: 100%;
+/* --- Section 4: Work Continues (Compact) --- */
+.work-continues-section {
+    background-color: #E8DED0;
+    padding: 40px 20px;
+    text-align: center;
 }
 
-.legacy-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 40px;
-    max-width: 1100px;
-    margin: 0 auto;
-}
+.work-title { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 4vw, 2.4rem); margin-bottom: 20px; }
 
-.legacy-card {
-    background-color: #ede4d9;
-    padding: 30px;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-}
+.work-list-item { font-family: 'Montserrat', sans-serif; font-size: clamp(0.65rem, 1.5vw, 0.8rem); text-transform: uppercase; letter-spacing: 3px; margin-bottom: 8px; color: #6B6258; }
 
-.legacy-img-box {
-    width: 100%;
-    height: 250px;
-    overflow: hidden;
-    margin-bottom: 25px;
-}
+.work-desc { font-family: 'Playfair Display', serif; font-size: clamp(0.95rem, 2vw, 1.2rem); line-height: 1.5; max-width: 700px; margin: 0 auto; }
 
-.legacy-img-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+/* --- Section 5: Legacy Grid --- */
+.legacy-section { background-color: #ffffff; padding: 80px 20px; }
 
-.legacy-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    color: #1B1917;
-    margin-bottom: 15px;
-}
+.legacy-grid { display: grid; grid-template-columns: 1fr; gap: 50px; max-width: 1100px; margin: 0 auto; }
 
-.legacy-desc {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: #444;
-    margin-bottom: 20px;
-}
+.legacy-card { background-color: #ffffff; padding: 10px; display: flex; flex-direction: column; }
 
-@media (min-width: 992px) {
-    .legacy-grid { grid-template-columns: repeat(2, 1fr); }
-}
+.legacy-img-box { height: 250px; overflow: hidden; margin-bottom: 25px; }
 
-/* --- Section 5: Dharma Quote Section --- */
+.legacy-img-box img { width: 100%; height: 100%; object-fit: cover; }
+
+.legacy-title { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 15px; }
+
+@media (min-width: 992px) { .legacy-grid { grid-template-columns: repeat(2, 1fr); } }
+
+/* --- Section 6: Dharma Quote (Small Text Match) --- */
 .dharma-section {
     background-color: #E8DED0;
-    padding: 60px 20px;
+    padding: 70px 20px;
+    display: flex;
+    justify-content: center;
     text-align: center;
+    width: 100%;
+}
+
+.dharma-container {
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dharma-line {
+    width: clamp(80px, 12vw, 120px);
+    height: 1px;
+    background-color: #a38d78;
+    opacity: 0.6;
+    margin: 25px auto;
 }
 
 .dharma-quote {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(1.4rem, 4vw, 2.4rem);
+    color: #333;
+    /* Balanced size: Max 2.6rem */
+    font-size: clamp(1.6rem, 3.5vw, 2.6rem); 
+    line-height: 1.4;
     font-style: italic;
-    margin-bottom: 20px;
+    font-weight: 500;
+    letter-spacing: -0.2px;
 }
 
 .dharma-desc {
     font-family: 'Montserrat', sans-serif;
-    max-width: 750px;
-    margin: 0 auto;
+    font-size: clamp(0.85rem, 1.8vw, 0.95rem);
     line-height: 1.8;
+    max-width: 750px;
+    color: #444;
+    margin: 10px auto;
+    font-weight: 400;
 }
 
-.dharma-line {
-    width: 100px;
-    height: 1px;
-    background-color: #a38d78;
-    margin: 20px auto;
+@media (max-width: 768px) {
+    .dharma-section { padding: 50px 15px; }
+    .dharma-quote { font-size: 1.4rem; line-height: 1.5; }
+    .dharma-quote br { display: none; }
+    .dharma-desc { font-size: 0.8rem; }
 }
