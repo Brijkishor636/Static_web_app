@@ -146,10 +146,10 @@ body, html {
 }
 
 .card-logo {
-    height: 80px; 
+    height: 140px; 
     width: auto;
     object-fit: contain;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .card-title {
@@ -285,4 +285,5 @@ body, html {
     .cta-text { font-size: 0.85rem; }
     .cta-link { font-size: 1.1rem; }
     .cta-line.top, .cta-line.bottom { margin-bottom: 15px; margin-top: 15px; }
+    .card-logo{height: 100px; margin-bottom: 10px;}
 }
