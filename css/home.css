@@ -56,13 +56,21 @@
 
 .legacy-heading {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 56px;
-    font-weight: 700;
-    max-width: 900px;
-    line-height: 100%;
-    color: #2C2C2C;
+    font-size: clamp(1.8rem, 4vw, 56px);
+    font-weight: 600;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-align: left;
 }
 
+@media (max-width: 768px) {
+    .legacy-heading {
+        white-space: normal;
+        text-align: center;
+        display: block;
+        width: 100%;
+    }
+}
 .legacy-body {
     max-width: 1100px;
     font-family: 'Source Serif Pro', serif;
