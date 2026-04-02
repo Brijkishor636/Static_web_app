@@ -6,23 +6,27 @@
 }
 
 body {
-    background-color: #F5F0E6; /* Light Beige background for the lower section */
+    background-color: #F5F0E6; 
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
 }
 
+/* --- HERO SECTION --- */
 .correspondence-hero {
     background-color: #E8DED0;  
-    height: 100vh;
+    /* Use min-height instead of height for mobile safety */
+    min-height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0 20px;
+    padding: 120px 24px 60px 24px; /* Space for fixed navbar */
 }
 
 .hero-content {
     max-width: 800px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,11 +35,12 @@ body {
 
 .hero-title {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2.5rem, 6vw, 64px);
+    /* Fluid typography: Min 32px, Max 64px */
+    font-size: clamp(2rem, 8vw, 64px);
     font-weight: 700;
     color: #2C2C2C;
     letter-spacing: 2px;
-    line-height: 1.2;
+    line-height: 1.1;
 }
 
 .hero-divider {
@@ -46,54 +51,73 @@ body {
 
 .hero-description {
     font-family: 'Source Serif Pro', serif;
-    font-size: clamp(1rem, 2vw, 20px);
-    font-weight: 300;
+    font-size: clamp(1rem, 2.5vw, 20px);
+    font-weight: 400;
     line-height: 1.6;
     color: #2C2C2C;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.2px;
+    max-width: 650px;
 }
 
+/* --- CONTACT SECTION --- */
 .contact-details {
-    padding: 100px 20px;
+    padding: 100px 24px;
     text-align: center;
-    height: 60vh;;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Use min-height so content isn't cramped */
+    min-height: 60vh;
 }
 
 .contact-container {
-    margin-top: 20px;
     display: flex;
     flex-direction: column;
     gap: 40px;
+    align-items: center;
 }
 
 .email-link {
     font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
+    font-size: clamp(12px, 2vw, 14px);
+    font-weight: 500;
     color: #2C2C2C;
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 1.12px;
-    transition: color 0.3s ease;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 4px;
 }
 
 .email-link:hover {
     color: #B69B7C;
+    border-bottom: 1px solid #B69B7C;
 }
 
 .tradition-text {
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(1.2rem, 3vw, 28px);
+    font-size: clamp(1.1rem, 4vw, 28px);
     font-weight: 400;
     color: #2C2C2C;
+    line-height: 1.4;
+    max-width: 800px;
 }
 
-/* --- Responsive Adjustments --- */
+/* --- FINAL RESPONSIVE LOGIC --- */
 
+/* Tablets & Small Desktops */
+@media (max-width: 1024px) {
+    .correspondence-hero {
+        padding-top: 140px;
+    }
+}
+
+/* Mobile Devices */
 @media (max-width: 768px) {
     .correspondence-hero {
-        height: auto;
-        padding: 120px 20px 80px 20px;
+        min-height: 70vh; /* Adjust height for smaller screens */
+        padding: 120px 20px 60px 20px;
     }
 
     .hero-content {
@@ -101,16 +125,37 @@ body {
     }
 
     .contact-details {
-        padding: 60px 20px;
+        padding: 80px 20px;
+        min-height: auto; /* Allow content to dictate height on mobile */
     }
     
     .contact-container {
-        gap: 30px;
+        gap: 32px;
+    }
+
+    .hero-divider {
+        width: 140px;
     }
 }
 
+/* Small Phones */
 @media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.2rem;
+        letter-spacing: 1px;
+    }
+
     .hero-divider {
-        width: 120px;
+        width: 100px;
+    }
+
+    .tradition-text {
+        font-size: 1.2rem;
+    }
+
+    .email-link {
+        letter-spacing: 1px;
+        /* Ensure email doesn't overflow on very small screens */
+        word-break: break-all;
     }
 }
