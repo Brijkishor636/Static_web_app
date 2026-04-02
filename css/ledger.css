@@ -45,7 +45,7 @@ body, html {
 
 /* The Horizontal Line between Heading and Subtitle */
 .accent-line {
-    width: 60px; 
+    width: 220px;
     height: 1px; 
     background-color: rgba(255, 255, 255, 0.7); 
     margin: 15px auto; 
