@@ -47,7 +47,8 @@ body, html {
     color: #ffffff;
     font-size: clamp(2.8rem, 8vw, 5rem);
     font-weight: 500;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
 }
 
 .hero-divider {
@@ -64,6 +65,7 @@ body, html {
     letter-spacing: 4px;
     text-transform: uppercase;
     font-weight: 300;
+        margin-top: 40px;
 }
 
 /* --- Section 2: Measure Quote --- */
@@ -78,7 +80,7 @@ body, html {
 }
 
 .measure-container {
-    max-width: 850px;
+    max-width: 1020px;
     width: 100%;
 }
 
@@ -90,8 +92,8 @@ body, html {
     margin: 0 auto;
 }
 
-.measure-line.top { margin-bottom: 25px; }
-.measure-line.bottom { margin-top: 25px; }
+.measure-line.top { margin-bottom: 40px; }
+.measure-line.bottom { margin-top: 40px; }
 
 .measure-text {
     font-family: 'Playfair Display', serif;
