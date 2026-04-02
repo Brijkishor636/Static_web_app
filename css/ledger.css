@@ -40,11 +40,11 @@ body, html {
     font-size: clamp(2.5rem, 8vw, 5rem); 
     font-weight: 500;
     margin-bottom: 10px;
-    letter-spacing: 2px;
+    
 }
 
 .accent-line {
-    width: clamp(50px, 10vw, 100px);
+    width: 220px;
     height: 1.5px;
     background-color: #a38d78;
     margin: 15px auto 25px auto;
@@ -52,15 +52,15 @@ body, html {
 
 .sub-heading {
     font-family: 'Montserrat', sans-serif;
-    color: #e0e0e0;
-    font-size: clamp(0.7rem, 2vw, 0.9rem);
-    letter-spacing: clamp(4px, 1vw, 8px);
+    color: #ffffff ;
+    font-size: 28px;
+   
     text-transform: uppercase;
     font-weight: 300;
     opacity: 0.9;
 }
 
-/* --- Section 2: Letter Section --- */
+
 .letter-section {
     width: 100%;
     min-height: 100vh;
@@ -134,7 +134,7 @@ body, html {
 }
 
 .header-line {
-    width: 80px;
+    width: 220px;
     height: 2px;
     background-color: #a38d78;
     margin: 0 auto 20px auto;
@@ -145,6 +145,8 @@ body, html {
     font-size: clamp(1.8rem, 5vw, 2.5rem);
     color: #1B1917;
     font-weight: 500;
+    margin-top: 60px;
+    
 }
 
 .virtues-grid {
@@ -168,7 +170,7 @@ body, html {
 
 .virtue-name {
     font-family: 'Playfair Display', serif;
-    font-size: 2.2rem;
+    font-size: 2rem;
     color: #1B1917;
     margin-bottom: 5px;
 }
@@ -177,7 +179,7 @@ body, html {
     font-family: 'Montserrat', sans-serif;
     font-size: 0.8rem;
     letter-spacing: 2px;
-    color: #8d8378; /* Initial muted color */
+    color: #8d8378; 
     text-transform: uppercase;
     margin-bottom: 15px;;
 }
