@@ -102,10 +102,10 @@ html, body {
 }
 
 .closing-line {
-    width: 850px;
+    width: 800px;
     height: 14px;
     margin: -30px auto 60px;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='850' height='14' viewBox='0 0 850 14' fill='none'%3E%3Cpath d='M5 7C100 6 200 9 300 7C400 5 500 6 600 7C700 8 780 6 845 7' stroke='%231B1917' stroke-width='1.5' stroke-linecap='round' opacity='0.75'/%3E%3C/svg%3E") no-repeat center;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='14' viewBox='0 0 800 14' fill='none'%3E%3Cpath d='M5 7C100 6 200 9 300 7C400 5 500 6 600 7C700 8 760 6 795 7' stroke='%231B1917' stroke-width='1.5' stroke-linecap='round' opacity='0.75'/%3E%3C/svg%3E") no-repeat center;
     background-size: contain;
 }
 

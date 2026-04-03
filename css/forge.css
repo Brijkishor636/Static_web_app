@@ -53,9 +53,7 @@ body {
     width: 220px;
     height: 1.5px;
     background-color: #B69B7C;
-    margin: 20px auto; 
-    margin-top:  40px ;
-    margin-bottom: 40px;
+    margin: 20px auto;
 }
 
 .hero-tagline {
@@ -90,8 +88,13 @@ body {
     max-width: 320px; 
     margin-left: auto;
     margin-right: auto;
+    transition: transform 0.8s ease;
+    will-change: transform;
 }
 
+.forge-card:hover {
+    transform: scale(1.02);
+}
 .card-image {
     width: 100%;
     margin-bottom: 40px;
@@ -106,7 +109,7 @@ body {
 
 .card-title {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 22px;
+    font-size: 28px;
     font-weight: 700;
     color: #2C2C2C;
     margin-bottom: 25px;
@@ -116,12 +119,11 @@ body {
 
 .card-text {
     font-family: 'Source Serif Pro', serif;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.5;
     color: #6B6258;
     margin-bottom: 30px;
     min-height: 130px; 
-    max-width: 220px;
 }
 
 .card-line {
