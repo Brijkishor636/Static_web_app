@@ -150,16 +150,17 @@
 
     .footer-nav {
         width: 100%;
+        text-align: left;
     }
 
     .footer-links {
-        text-align: left; /* Aligns text left */
+        text-align: left; 
         margin-top: 20px;
-        padding-left: 0; /* Removes default list padding */
-        display: block; /* Ensures it takes full width */
+        padding-left: 0; 
+        display: block; 
     }
 
     .footer-links li {
-        list-style: none; /* Removes bullets if they appear */
+        list-style: none;
     }
 }
