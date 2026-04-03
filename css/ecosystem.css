@@ -13,7 +13,7 @@ body, html {
     scroll-behavior: smooth;
 }
 
-/* --- Section 1: Ecosystem Hero --- */
+/* --- Section 1: Ecosystem Hero (Untouched) --- */
 .ecosystem-hero {
     position: relative;
     height: 100vh;
@@ -24,8 +24,7 @@ body, html {
     justify-content: center;
     align-items: center;
     text-align: center;
-   filter: grayscale(60%) sepia(40%) brightness(80%);
-    
+    filter: grayscale(60%) sepia(40%) brightness(80%);
 }
 
 .overlay {
@@ -38,39 +37,12 @@ body, html {
     z-index: 1;
 }
 
-.content {
-    position: relative;
-    z-index: 2;
-    padding: 0 20px;
-}
+.content { position: relative; z-index: 2; padding: 0 20px; }
+.title { font-family: 'Playfair Display', serif; color: #ffffff; font-size: clamp(2.5rem, 8vw, 4.5rem); font-weight: 500; margin-bottom: 40px; letter-spacing: 1px; }
+.divider { width: 260px; height: 1.5px; background-color: #a38d78; margin: 0 auto 25px auto; }
+.subtitle { font-family: 'Montserrat', sans-serif; color: #f4f4f4; font-size: clamp(0.7rem, 2vw, 0.9rem); letter-spacing: 5px; text-transform: uppercase; font-weight: 300; margin-top: 40px; }
 
-.title {
-    font-family: 'Playfair Display', serif;
-    color: #ffffff;
-    font-size: clamp(2.5rem, 8vw, 4.5rem);
-    font-weight: 500;
-    margin-bottom: 40px;
-    letter-spacing: 1px;
-}
-
-.divider {
-    width: 260px;
-    height: 1.5px;
-    background-color: #a38d78; 
-    margin: 0 auto 25px auto;
-}
-
-.subtitle {
-    font-family: 'Montserrat', sans-serif;
-    color: #f4f4f4;
-    font-size: clamp(0.7rem, 2vw, 0.9rem);
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    font-weight: 300;
-     margin-top: 40px;
-}
-
-/* --- Section 2: Legacy Quote Section --- */
+/* --- Section 2: Legacy Quote Section (Untouched) --- */
 .legacy-quote-section {
     background-color: #E8DED0; 
     padding: 60px 20px; 
@@ -82,44 +54,23 @@ body, html {
     text-align: center;
 }
 
-.quote-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.quote-line {
-    width: clamp(100px, 20vw, 200px);
-    height: 2px;
-    background-color: #a38d78; 
-    opacity: 0.6;
-}
-
+.quote-container { width: 100%; display: flex; flex-direction: column; align-items: center; }
+.quote-line { width: clamp(100px, 20vw, 200px); height: 2px; background-color: #a38d78; opacity: 0.6; }
 .quote-line.top { margin-bottom: 50px; }
 .quote-line.bottom { margin-top: 50px; }
+.legacy-text { font-family: 'Playfair Display', serif; color: #1B1917; font-size: clamp(1.1rem, 2.5vw, 1.6rem); line-height: 1.6; letter-spacing: 0.5px; font-weight: 500; padding: 0 15px; }
 
-.legacy-text {
-    font-family: 'Playfair Display', serif;
-    color: #1B1917; 
-    font-size: clamp(1.1rem, 2.5vw, 1.6rem);
-    line-height: 1.6;
-    letter-spacing: 0.5px;
-    font-weight: 500;
-    padding: 0 15px;
-}
-
-/* --- Section 3: Venture Section --- */
+/* --- Section 3: Venture Section (UPDATED) --- */
 .venture-section {
     background-color: #F5F0E6;
-    padding: 60px 20px;
+    padding: 80px 20px;
     width: 100%;
 }
 
 .venture-grid {
     display: flex;
     flex-direction: column; 
-    align-items: center; /* Ensures the card is centered in its column on mobile */
+    align-items: center; 
     gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
@@ -129,25 +80,26 @@ body, html {
     background-color: #ede4d9; 
     border-radius: 25px;
     padding: 50px 35px;
-    width: 100%; /* Changed from 90% to 100% so parent padding handles the edges */
-    max-width: 500px; /* Optional: prevents cards from being too wide on landscape phones */
+    width: 100%; 
+    max-width: 500px; 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    cursor: default;
     margin-left: auto;
     margin-right: auto;
+    /* ✅ Border and Spacing Logic */
+    border: 2px solid transparent; 
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+/* ✅ Hover state for all four cards */
+.venture-card:hover {
+    border-color: #C0A88D; /* Matches Old Root text color */
 }
 
 .card-header {
     text-align: center;
     margin-bottom: 30px;
-    color: #2C2C2C;
-    font-size: 18px;
-    font-family: Montserrat;
-    font-weight: 400;
-    line-height: 33.12px;
-    word-wrap: break-word;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .card-logo {
@@ -170,8 +122,15 @@ body, html {
     letter-spacing: 1.5px;
     color: #2C2C2C;
     font-weight: 400;
-    line-height: 33.12px;
-    word-wrap: break-word;
+}
+
+.card-body {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #6B6258;
+    /* ✅ This pushes footer down and makes cards equal size in grid */
+    flex-grow: 1; 
 }
 
 .section-label {
@@ -181,20 +140,9 @@ body, html {
     margin-bottom: 8px;
     color: #C0A88D;
     font-weight: 700;
-    line-height: 32px;
-    word-wrap: break-word;
 }
 
-.card-body {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.05rem;
-    line-height: 1.7;
-    color: #6B6258;
-}
-
-.card-body p {
-    margin-bottom: 25px;
-}
+.card-body p { margin-bottom: 25px; }
 
 .card-divider {
     width: 100%;
@@ -219,9 +167,12 @@ body, html {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 40px;
+        /* ✅ Ensures cards stretch to the same height in each row */
+        align-items: stretch; 
     }
     .venture-card {
-        max-width: none; /* Allow grid to control width on desktop */
+        max-width: none;
+        height: 100%;
     }
 }
 
@@ -231,59 +182,19 @@ body, html {
 
 @media (max-width: 768px) {
     .ecosystem-hero { height: 85vh; }
-    .legacy-quote-section { padding: 50px 20px; }
-    .card-logo { height: 65px; }
+    .legacy-quote-section { padding: 50px 20px; height: auto; min-height: 40vh; }
+    .card-logo { height: 80px; }
 }
 
-/* --- CTA Section --- */
-.cta-section {
-    background-color: #E8DED0;
-    padding: 40px 20px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.cta-container {
-    max-width: 800px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.cta-line {
-    width: clamp(80px, 15vw, 150px);
-    height: 1px;
-    background-color: #a38d78;
-    opacity: 0.5;
-}
-
+/* --- CTA Section (Untouched) --- */
+.cta-section { background-color: #E8DED0; padding: 40px 20px; width: 100%; display: flex; justify-content: center; align-items: center; text-align: center; }
+.cta-container { max-width: 800px; width: 100%; display: flex; flex-direction: column; align-items: center; }
+.cta-line { width: clamp(80px, 15vw, 150px); height: 1px; background-color: #a38d78; opacity: 0.5; }
 .cta-line.top { margin-bottom: 25px; }
 .cta-line.bottom { margin-top: 25px; }
-
-.cta-text {
-    font-family: 'Montserrat', sans-serif;
-    color: #444;
-    font-size: clamp(0.9rem, 2vw, 1.1rem);
-    line-height: 1.5;
-    margin-bottom: 10px;
-    font-weight: 300;
-}
-
-.cta-link {
-    font-family: 'Montserrat', sans-serif;
-    color: #1B1917;
-    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.cta-link:hover {
-    color: #a38d78;
-}
+.cta-text { font-family: 'Montserrat', sans-serif; color: #444; font-size: clamp(0.9rem, 2vw, 1.1rem); line-height: 1.5; margin-bottom: 10px; font-weight: 300; }
+.cta-link { font-family: 'Montserrat', sans-serif; color: #493d30; font-size: clamp(1.1rem, 2.5vw, 1.4rem); font-weight: 600; text-decoration: none; transition: color 0.3s; }
+.cta-link:hover { color: #a38d78; }
 
 @media (max-width: 768px) {
     .cta-section { padding: 30px 15px; }
