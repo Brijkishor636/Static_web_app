@@ -79,8 +79,8 @@ body {
 
 .email-link {
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(12px, 2vw, 14px);
-    font-weight: 500;
+    font-size: clamp(10px, 2vw, 12px);
+    font-weight: 400;
     color: #2C2C2C;
     text-decoration: none;
     text-transform: uppercase;
