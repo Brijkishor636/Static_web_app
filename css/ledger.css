@@ -74,10 +74,10 @@ html, body {
 }
 
 .letter-divider {
-    width: min(70%, 600px);
+    width: 600px;
     height: 15px;
     margin: 0 auto 50px;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='18' viewBox='0 0 320 18' fill='none'%3E%3Cpath d='M4 10C34 9 53 7 83 8C113 9 131 12 160 11C190 10 208 6 238 7C268 8 287 11 316 9' stroke='%231B1917' stroke-width='2.2' stroke-linecap='round' opacity='0.72'/%3E%3C/svg%3E") no-repeat center;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='18' viewBox='0 0 600 18' fill='none'%3E%3Cpath d='M5 10C70 9 140 7 210 8C280 9 350 12 420 11C490 10 540 6 585 7' stroke='%231B1917' stroke-width='2.2' stroke-linecap='round' opacity='0.72'/%3E%3C/svg%3E") no-repeat center;
     background-size: contain;
 }
 
@@ -102,10 +102,10 @@ html, body {
 }
 
 .closing-line {
-    width: 90%;
-    height: 12px;
-    margin: -10px auto 30px;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='12' viewBox='0 0 260 12' fill='none'%3E%3Cpath d='M3 6C25 5 50 7 75 6C100 5 125 4 150 5C175 6 200 7 225 6C240 5 250 6 257 6' stroke='%231B1917' stroke-width='1.4' stroke-linecap='round' opacity='0.75'/%3E%3C/svg%3E") no-repeat center;
+    width: 850px;
+    height: 14px;
+    margin: -30px auto 60px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='850' height='14' viewBox='0 0 850 14' fill='none'%3E%3Cpath d='M5 7C100 6 200 9 300 7C400 5 500 6 600 7C700 8 780 6 845 7' stroke='%231B1917' stroke-width='1.5' stroke-linecap='round' opacity='0.75'/%3E%3C/svg%3E") no-repeat center;
     background-size: contain;
 }
 
@@ -155,4 +155,14 @@ html, body {
 @media (min-width: 1024px) { 
     .virtues-grid { grid-template-columns: repeat(4, 1fr); gap: 25px; }
     .virtues-section { padding: 120px 40px; }
+}
+
+@media (max-width: 768px) {
+    .closing-line {
+        width: 90%;
+        height: 12px;
+        margin: -10px auto 40px;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1000' height='12' viewBox='0 0 1000 12' fill='none'%3E%3Cpath d='M5 6C120 5 240 8 360 6C480 5 600 6 720 6C840 7 920 6 995 6' stroke='%231B1917' stroke-width='1.4' stroke-linecap='round' opacity='0.75'/%3E%3C/svg%3E") no-repeat center;
+        background-size: contain;
+    }
 }
