@@ -144,4 +144,11 @@
     .award-icon {
         width: 200px;
     }
+
+    .footer-nav{
+        text-align: left;
+    }
+    .footer-links {
+        text-align: left;
+    }
 }
