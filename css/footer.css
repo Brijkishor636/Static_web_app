@@ -68,15 +68,14 @@
 
 /* Right Section: Navigation */
 .footer-links {
-    list-style: none; /* Removes dots */
-    padding: 0;       /* Removes indentation */
+    list-style: none;
+    padding: 0;
     margin: 0;
     text-align: right;
 }
 
 .footer-links li {
     margin-bottom: 12px;
-    list-style: none; /* Double insurance to remove dots */
 }
 
 .footer-links a {
@@ -110,12 +109,12 @@
 @media (max-width: 1024px) {
     .footer-main-content {
         flex-direction: column;
-        align-items: center; /* Centers the whole block */
+        align-items: center;
         text-align: center;
     }
     
     .footer-links {
-        text-align: center; /* Keeps it centered for tablets */
+        text-align: center;
         margin-top: 20px;
     }
 }
@@ -127,12 +126,13 @@
     }
     
     .footer-main-content {
-        align-items: flex-start; /* Forces the block to the left */
+        /* Force child elements to align to the left of the container */
+        align-items: flex-start;
         text-align: left;
     }
 
     .footer-brand-section {
-        align-items: flex-start; /* Forces logo/text to the left */
+        align-items: flex-start;
     }
 
     .footer-company-name {
@@ -143,26 +143,24 @@
         font-size: 11px;
         text-align: left;
     }
+    
+    .award-icon {
+        width: 200px;
+    }
 
     .footer-nav {
         width: 100%;
+        text-align: left;
     }
 
     .footer-links {
-        display: flex;
-        flex-direction: column; /* Stacks them vertically */
-        align-items: flex-start; /* Aligns the stack to the left */
         text-align: left; 
-        margin-top: 30px;
-        padding: 0 !important; /* Forces removal of any bullet padding */
+        margin-top: 20px;
+        padding-left: 0; 
+        display: block; 
     }
 
     .footer-links li {
-        margin-bottom: 15px;
-        list-style: none !important; /* Removes those stubborn dots */
-    }
-    
-    .footer-links li::before {
-        content: none !important; /* Removes any custom bullet points if they exist */
+        list-style: none;
     }
 }
