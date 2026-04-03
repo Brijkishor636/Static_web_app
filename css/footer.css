@@ -119,17 +119,29 @@
     }
 }
 
+/* Mobile Screen Adjustments */
 @media (max-width: 768px) {
     .marwar-footer {
         padding: 40px 20px;
     }
     
+    .footer-main-content {
+        /* Force child elements to align to the left of the container */
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .footer-brand-section {
+        align-items: flex-start;
+    }
+
     .footer-company-name {
         font-size: 24px;
     }
     
     .footer-tagline {
         font-size: 11px;
+        text-align: left;
     }
     
     .award-icon {
@@ -138,12 +150,16 @@
 
     .footer-nav {
         width: 100%;
-        display: flex;
-        justify-content: flex-start;
     }
 
     .footer-links {
-        text-align: left;
+        text-align: left; /* Aligns text left */
         margin-top: 20px;
+        padding-left: 0; /* Removes default list padding */
+        display: block; /* Ensures it takes full width */
+    }
+
+    .footer-links li {
+        list-style: none; /* Removes bullets if they appear */
     }
 }
