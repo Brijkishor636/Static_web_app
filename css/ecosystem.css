@@ -194,7 +194,6 @@ body, html {
 .cta-line.bottom { margin-top: 25px; }
 .cta-text { font-family: 'Montserrat', sans-serif; color: #444; font-size: clamp(0.9rem, 2vw, 1.1rem); line-height: 1.5; margin-bottom: 10px; font-weight: 300; }
 .cta-link { font-family: 'Montserrat', sans-serif; color: #493d30; font-size: clamp(1.1rem, 2.5vw, 1.4rem); font-weight: 600; text-decoration: none; transition: color 0.3s; }
-.cta-link:hover { color: #a38d78; }
 
 @media (max-width: 768px) {
     .cta-section { padding: 30px 15px; }
